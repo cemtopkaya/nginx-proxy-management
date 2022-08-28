@@ -30,4 +30,6 @@ Eğer nginx proxy management konteyneri için --network=host ayarını yapmış 
 
 ![](.vscode/readme-images/2022-08-28-11-48-17.png)
 
+![image](https://user-images.githubusercontent.com/261946/187072079-0fd8ac6e-443d-4935-852d-b97f25fc3326.png)
+
 ![](.vscode/readme-images/2022-08-27-17-13-19.png)
