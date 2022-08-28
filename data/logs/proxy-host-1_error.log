@@ -1,2 +1,0 @@
-2022/08/27 13:18:06 [error] 375#375: *126 localhost could not be resolved (3: Host not found), client: 172.18.0.1, server: debian.local, request: "GET / HTTP/1.1", host: "debian.local"
-2022/08/27 13:18:07 [error] 375#375: *126 localhost could not be resolved (3: Host not found), client: 172.18.0.1, server: debian.local, request: "GET /favicon.ico HTTP/1.1", host: "debian.local", referrer: "http://debian.local/"

@@ -3,15 +3,19 @@ services:
   app:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
-    # Eğer proxy manager'a ekleyeceğimiz host'lar proxy ile aynı makinada çalışıyorlarsa 
-    # yani üzerine gelen trafiği proxy manager'ın host sunucusunun farklı portlarındaki konteynerlere 
+    # Eğer proxy manager'a ekleyeceğimiz host'lar proxy ile aynı 
+    # makinada çalışıyorlarsa yani üzerine gelen trafiği proxy
+    # manager'ın host sunucusunun farklı portlarındaki konteynerlere 
     # yönlendirecekse network_mode:host seçilebilir.
-    # proxy manager böylece 127.0.0.1 adresine yönlendirdiğinde host'un kendisinde port mapping yapılan
+    # proxy manager böylece 127.0.0.1 adresine yönlendirdiğinde 
+    # host'un kendisinde port mapping yapılan
     # konteynerlere trafiği akıtır. 
     # network_mode: host
     #
-    # Eğer docker desktop kurulu windows host'un üstündeki konteynerlere trafiği yönlendirecekse
-    # örneğin host.docker.internal:8002 veya host.docker.internal:8003 gibi proxy host ve port yazılabilir.
+    # Eğer docker desktop kurulu windows host'un üstündeki 
+    # konteynerlere trafiği yönlendirecekse
+    # örneğin host.docker.internal:8002 veya 
+    # host.docker.internal:8003 gibi proxy host ve port yazılabilir.
     ports:
       - '80:80'
       - '81:81'
@@ -26,12 +30,12 @@ services:
 # adreslerinden uygulamalara yönlendirme yapar
   web1:
     image: nginxdemos/hello
-    container_name: bir
+    container_name: web-sunucu-8002
     ports:
       - '8002:80'
   
   web2:
-    container_name: iki
+    container_name: web-sunucu-8003
     image: nginxdemos/hello
     ports:
       - '8003:80'
