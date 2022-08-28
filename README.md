@@ -1,5 +1,9 @@
-# Nasıl çalışır?
+# Ornek 1
+Burada anlatılanlar `docker-compose-ornek-1.yml` dosyası içindir.
 
+# Nasıl çalışır?
+Kullanıcı adı: admin@example.com
+Şifre: changeme
 ![](.vscode/readme-images/2022-08-28-11-28-34.png)
 
 
@@ -30,6 +34,18 @@ Eğer nginx proxy management konteyneri için --network=host ayarını yapmış 
 
 ![](.vscode/readme-images/2022-08-28-11-48-17.png)
 
-![image](https://user-images.githubusercontent.com/261946/187072079-0fd8ac6e-443d-4935-852d-b97f25fc3326.png)
+---
 
+# Ornek 2
+Burada anlatılanlar `docker-compose-ornek-2.yml` dosyası içindir.
+
+`C:\Windows\System32\drivers\etc\hosts` Dosyasına aşağıdaki satırları eklemeliyiz:
+
+```shell
+127.0.0.1	registry.nginx-proxy-ornek.com
+127.0.0.1	debianrepo.nginx-proxy-ornek.com
+127.0.0.1	chartmuseum.nginx-proxy-ornek.com
+```
+
+![image](https://user-images.githubusercontent.com/261946/187072079-0fd8ac6e-443d-4935-852d-b97f25fc3326.png)
 

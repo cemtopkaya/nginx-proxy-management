@@ -1,0 +1,45 @@
+version: '2'
+
+services:
+  registry:
+    container_name: registry
+    image: registry:2.7.0
+    ports:
+      - 5000:5000
+    volumes:
+      - ./volumes/registry/data:/var/lib/registry
+
+  chartmuseum:
+    container_name: chartmuseum
+    image: docker.io/bitnami/chartmuseum:0
+    environment:
+      STORAGE: local
+      STORAGE_LOCAL_ROOTDIR: /charts
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./volumes/chartmuseum/data:/bitnami/data
+
+  debrepo:
+    container_name: debrepo
+    image: cinar/debrepo
+    build:
+      context: ./volumes/deb-repo/
+      dockerfile: Dockerfile
+    ports:
+      - "8090:80"
+    volumes:
+      - ./volumes/deb-repo/data:/data
+      - ./volumes/deb-repo/repo-scripts:/repo-scripts
+
+  nginx-proxy:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    # network_mode: host
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+    volumes:
+      - ./volumes/nginx-proxy-mgmt/ornek-2/data:/data
+      - ./volumes/nginx-proxy-mgmt/ornek-2/letsencrypt:/etc/letsencrypt

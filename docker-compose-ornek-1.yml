@@ -21,8 +21,8 @@ services:
       - '81:81'
       - '443:443'
     volumes:
-      - ./data:/data
-      - ./letsencrypt:/etc/letsencrypt
+      - ./volume/nginx-proxy-mgmt/ornek-1/data:/data
+      - ./volume/nginx-proxy-mgmt/ornek-1/letsencrypt:/etc/letsencrypt
 
 # Aşağıdaki konteynerler 8002 ve 8003 portunda çalışıp nginx-proxy 
 # http://debian.local

@@ -1,0 +1,9 @@
+2022/08/28 10:25:49 [warn] 284#284: 1024 worker_connections are not enough, reusing connections
+2022/08/28 10:25:49 [alert] 284#284: 1024 worker_connections are not enough
+2022/08/28 10:25:49 [error] 285#285: *1536 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:80/favicon.ico", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/28 10:25:53 [error] 284#284: *1539 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: nginxproxymanager, request: "GET /api/ HTTP/1.1", upstream: "http://127.0.0.1:3000/", host: "127.0.0.1:81", referrer: "http://127.0.0.1:81/"
+2022/08/28 10:25:58 [error] 285#285: *1542 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: nginxproxymanager, request: "POST /api/tokens HTTP/1.1", upstream: "http://127.0.0.1:3000/tokens", host: "127.0.0.1:81", referrer: "http://127.0.0.1:81/login"
+2022/08/28 10:26:03 [error] 285#285: *1542 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: nginxproxymanager, request: "POST /api/tokens HTTP/1.1", upstream: "http://127.0.0.1:3000/tokens", host: "127.0.0.1:81", referrer: "http://127.0.0.1:81/login"
+2022/08/28 11:46:40 [warn] 307#307: 1024 worker_connections are not enough, reusing connections
+2022/08/28 11:46:40 [alert] 307#307: 1024 worker_connections are not enough
+2022/08/28 11:46:40 [error] 307#307: *1842 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:80/favicon.ico", host: "localhost", referrer: "http://localhost/"
